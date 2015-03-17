@@ -1,5 +1,10 @@
 .nav {
-  
+  @include max-width($tp-masthead-hamburger) {
+  	display: none;
+  	.masthead--toggled & {
+  		display: block;
+  	}
+  }
 }
 .nav__list {
 
@@ -9,4 +14,9 @@
 }
 [class^="nav__link--"] {
 	
+}
+.nav__toggle {
+	@include min-width($tp-masthead-hamburger) {
+		display: none;
+	}
 }
