@@ -8,9 +8,9 @@ priority: 0.95
     <article class="type group">
     <h1>Blog</h1>
     <h2>Recent journal posts</h2>
-    <% page_articles.take(5).each_with_index do |article, i| %>
       <% t_name = ''; t_link = ''; article.tags.each do |tag, articles| %>
         <% t_link = tag_path(tag); t_name = tag %>
+      <% posts_to_show = defined?(default_posts) ? default_posts : 5; page_articles.take(posts_to_show.to_i).each_with_index do |article, i| %>
       <% end %>
       <% localised_date = "<time>#{article.date.strftime("%e %b %y")}</time>" %>
       <h3><%= link_to article.title, article %></h3>

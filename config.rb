@@ -92,6 +92,7 @@ set :default_description, 'Built with Middleplate'
 set :default_title, 'Built with Middleplate'
 set :default_title_suffix, '• Change me'
 set :default_site_title, 'Middleplate'
+set :default_posts, '5'
 
 # Set some sharing credentials
 set :twitter_username, 'robsterlini'
