@@ -6,7 +6,7 @@
   <main id="main">
     <article class="group" data-anchors>
       <h1><%= current_article.title %></h1>
-      <p><%= current_article.data.description %></p>
+      <p class="paragraph--pullout"><%= current_article.data.description %></p>
       <% if current_article.data.tldr %>
         <aside class="article__tldr">
           <p id="tldr"><strong><abbr title="Too long didn’t read">TL;DR</abbr></strong> <em><%= current_article.data.tldr %></em></p>

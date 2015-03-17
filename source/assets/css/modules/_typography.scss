@@ -11,89 +11,73 @@
 h1, h2, h3, h4, h5, h6, p, ul, ol {
 	@include font-feature-settings(liga kern onum);
 	max-width:$layout-max-width-suffix;
+	line-height: 1.35;
 }
 
-h1,
-h2,
-h3 {
-	font-weight: $font-weight-bold;
-}
 h1 {
 	@include font-size(52);
-	line-height:1.15;
+	font-weight: $font-weight-bold;
 	margin:rem(72) auto rem(24);
-  @include max-width($bp-small) {
-    @include font-size(42);
-    // margin-top: rem(64);
-  }
-  @include max-width($bp-tiny) {
-    @include font-size(34);
-    // margin-top: rem(48);
-  }
-  & + h2 {
-  	padding-top: rem(28);
-  }
 }
 
 h2 {
 	@include font-size(32);
-	line-height:1.35;
-	margin:0 auto rem(12);
-	padding-top:rem(48);
-	@include max-width($bp-small) {
-		@include font-size(28);
-	}
-	@include max-width($bp-tiny) {
-		@include font-size(24);
-	}
+	font-weight: $font-weight-bold;
+	margin:rem(48) auto rem(12);
+}
+
+%h3 {
+	@include font-size(25);
 }
 
 h3 {
-	@include font-feature-settings(smcp c2sc);
-	@include font-size(25);
+	@extend %h3;
+	font-weight: $font-weight-bold;
 	margin:rem(24) auto rem(16);
-	line-height:1.05;
-	@include max-width($bp-small) {
-		@include font-size(22);
-	}
-	@include max-width($bp-tiny) {
-		@include font-size(19);
-	}
+}
+
+%h4 {
+	@include font-size(22);
+	margin: rem(8) auto rem(16);
 }
 
 h4 {
-	@include font-size(30);
-	margin:em(8, 30) auto em(16, 30);
+	@extend %h4;
 }
-
 h5 {
-	@include font-size(24);
-	margin:em(12, 24) auto em(12, 24);
+	@extend %h4;
 }
-
 h6 {
-	@include font-size(20);
-	margin:em(10, 20) auto em(10, 20);
+	@extend %h4;
 }
 
-.heading--has-anchor {
-	text-indent:rem(-35);
-	@include max-width($bp-mid) {
-		text-indent:0;
+@include max-width($bp-small) {
+	h1 {
+		@include font-size(42);
+	}
+	h2 {
+		@include font-size(28);
+	}
+	%h3 {
+		@include font-size(22);
+	}
+	%h4 {
+		@include font-size(20);
 	}
 }
-.heading--anchor {
-	width:rem(35);
-	padding-right:rem(5);
-	text-indent:0;
-	text-align: right;
-	display: inline-block;
-	@include max-width($bp-mid) {
-		width:auto;
+@include max-width($bp-tiny) {
+	h1 {
+		 @include font-size(34);
 	}
-}
-.heading--clear {
-	clear: both;
+	h2 {
+		@include font-size(24);
+	}
+	%h3 {
+		@include font-size(20);
+	}
+	%h4 {
+		@include font-size(18);
+	}
 }
 
 /* ==|== Typography =================
@@ -120,6 +104,10 @@ p {
 }
 .small-caps {
 	line-height: 1.1;
+}
+
+.paragraph--pullout {
+	@extend %h3;
 }
 
 blockquote {
@@ -171,4 +159,5 @@ abbr[title] {
 }
 
 .strike {
+	text-decoration: line-through;
 }
