@@ -1,0 +1,30 @@
+---
+title: Posts from the archive
+description: This is a year-sorted archive of posts
+---
+
+<section id="content" class="wrapper">
+  <main>
+    <h1>Archive</h1>
+    <p class="article__description">Here’s a repository of all of my ramblings from over the years. Some of them are pretty old though, so 2014 me doesn’t necessarily agree with 2012 me!</p>
+      <article class="type group">
+        <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
+          <h2 id="<%= year %>"><%= year %></h2>
+          <% articles.each_with_index do |article, i| %>
+            <% t_name = ''; t_link = ''; article.tags.each do |tag, articles| %>
+              <% t_link = tag_path(tag); t_name = tag %>
+            <% end %>
+            <% localised_date = "<time>#{article.date.strftime("%e %b %y")}</time>" %>
+            <h3><%= link_to article.title, article %></h3>
+            <p class="small-caps"><%= localised_date %> • <a href='<%= t_link %>' title='See other posts about <%= t_name %>'><%= t_name %></a></p>
+          <% end %>
+        <% end %>
+        <h2>Categories</h2>
+        <ul class="categories"><!--
+          <% blog.tags.each do |tag, articles| %>
+            --><li class="category__item"><%= link_to "#{tag}", tag_path(tag), :class => "category__link ss-cat-#{tag.to_slug}", :title => "Read the #{articles.size} posts on #{tag}" %></li><!--
+          <% end %>
+        --></ul>
+    </article>
+  </main>
+</section>
