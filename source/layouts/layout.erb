@@ -34,7 +34,7 @@
     <meta name="twitter:title" content="<%= yield_content(:title) || current_page.data.title || "Web designer" %>">
     <meta name="twitter:description" content="<%= meta_description %>">
     <meta name="twitter:creator" content="@robsterlini">
-    <meta name="twitter:image:src" content="<%= url_root %><%= yield_content(:hero_loc) || hero_dir %><%= current_page.data.hero || yield_content(:hero) || current_page.data.card_image || "main.jpg" %>">
+    <meta name="twitter:image:src" content="<%= url_root %>main.jpg">
     <meta name="twitter:domain" content="robsterlini.co.uk">
     
     <%= stylesheet_link_tag "screen" %>
