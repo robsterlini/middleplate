@@ -1,13 +1,15 @@
 <footer class="footer">
   <div class="group">
-    <ul class="list--inline">
-      <!--<% data.pages.masthead.each do |nav| %>
-        --><li>
-          <% label = nav.abbr ? "<abbr class='nav__label' title='#{nav.abbr.title}'>#{nav.abbr.label}</abbr>" : "#{nav.label}" %>
-          <a title="<%= nav.alt %>" href="/<%= nav.slug %>"><%= label %></a>
-        </li><!--
-      <% end %>-->
-    </ul>
   	<p>Built on <a href="https://robsterlini.co.uk" title="Visit Rob’s site" rel="nofollow">Rob Sterlini</a>’s Middleman boilerplate <a href="https://github.com/robsterlini/middleplate" title="Fork the Middleplate repo" rel="nofollow">Middleplate</a>.
+    <ul class="list--inline"><!--
+      <% data.pages.navigation.each do |nav| %>
+        <% if nav.is_in_footer != false %>
+          --><li>
+            <% label = nav.abbr ? "<abbr class='nav__label' title='#{nav.abbr.title}'>#{nav.abbr.label}</abbr>" : "#{nav.label}" %>
+            <a title="<%= nav.alt %>" href="/<%= nav.slug %>"><%= label %></a>
+          </li><!--
+        <% end %>
+      <% end %>
+    --></ul>
   </div>
 </footer>
