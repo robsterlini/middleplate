@@ -86,6 +86,11 @@ set :images_dir, 'assets/images'
 # Set base URLs
 set :url_root, 'https://robsterlini.co.uk'
 
+# Set some defaults
+set :default_description, 'Built with Middleplate'
+set :default_title, 'Built with Middleplate'
+set :default_title_suffix, '• Change me'
+
 # Create pages
 
 # Turn on Pretty URLs
