@@ -33,6 +33,12 @@ pages:
             label: "Blog"
             alt: "Read my blog"
 
+    ## Archive
+    -   slug: "archive"
+        nav:
+            label: "Archive"
+            alt: "Peruse the archive of old posts"
+
     ## Example page
     -   slug: "example-page"
         title: "Test123"
