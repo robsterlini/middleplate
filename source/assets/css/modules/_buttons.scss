@@ -12,6 +12,10 @@
 
 }
 
+.btns--sizing {
+	@extend %paragraph;
+}
+
 .btns--center {
 	text-align: center;
 	body.contact_index & {
