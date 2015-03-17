@@ -14,35 +14,14 @@
 .wrapper {
   overflow: hidden;
   width:100%;
-  // padding-bottom:rem(110);
   flex:1;
 }
-
-%masthead-toggled-slide {
-  @include max-width($tp-masthead-hamburger) {
-    transition:transform $timing cubic-bezier(#{$bezier-nice}), opacity $timing cubic-bezier(#{$bezier-nice});
-    .masthead--toggled & {
-      opacity: 0.5;
-      transform: translateX($measure-unit);
-    }
-  }
-}
-
 main {
-  @extend %masthead-toggled-slide;
   background:$color-white;
   overflow: hidden;
   position: relative;
   z-index:1;
   padding-bottom: $measure-unit * 3;
-  padding-left: $masthead-full;
-  @include max-width($tp-masthead-icon) {
-    padding-left: $masthead-icon;
-  }
-  @include max-width($tp-masthead-hamburger) {
-    padding-left:0;
-    padding-bottom: $measure-unit / 2;
-  }
 }
 
 hr {
