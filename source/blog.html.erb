@@ -21,11 +21,7 @@ priority: 0.95
     <p class="btns--center"><a href="/archive" class="btn" title="See the rest of my blog entries">There are more in the archive</a></p>
 
     <h2>Categories</h2>
-    <ul class="categories"><!--
-      <% blog.tags.each do |tag, articles| %>
-        --><li class="category__item"><%= link_to "#{tag}", tag_path(tag), :class => "category__link ss-cat-#{tag.to_slug}", :title => "Read the #{articles.size} posts on #{tag}" %></li><!--
-      <% end %>
-    --></ul>
+    <%= partial "partials/categories" %>
 
     </article>
   </main>

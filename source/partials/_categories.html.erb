@@ -1,0 +1,5 @@
+<ul class="categories"><!--
+  <% blog.tags.each do |tag, articles| %>
+    --><li class="category__item"><%= link_to "#{tag}", tag_path(tag), :class => "category__link ss-cat-#{tag.to_slug}", :title => "Read the #{articles.size} posts on #{tag}" %></li><!--
+  <% end %>
+--></ul>
