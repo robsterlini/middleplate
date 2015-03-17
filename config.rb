@@ -85,11 +85,16 @@ set :images_dir, 'assets/images'
 
 # Set base URLs
 set :url_root, 'https://robsterlini.co.uk'
+set :url_base, 'robsterlini.co.uk'
 
 # Set some defaults
 set :default_description, 'Built with Middleplate'
 set :default_title, 'Built with Middleplate'
 set :default_title_suffix, '• Change me'
+set :default_site_title, 'Middleplate'
+
+# Set some sharing credentials
+set :twitter_username, 'robsterlini'
 
 # Create pages
 

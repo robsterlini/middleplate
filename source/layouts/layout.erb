@@ -30,12 +30,12 @@
 
     <!-- TWITTER CARDS -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@robsterlini">
+    <meta name="twitter:site" content="@<%= twitter_username %>">
     <meta name="twitter:title" content="<%= yield_content(:title) || current_page.data.title || "Web designer" %>">
     <meta name="twitter:description" content="<%= meta_description %>">
-    <meta name="twitter:creator" content="@robsterlini">
+    <meta name="twitter:creator" content="@<%= twitter_username %>">
     <meta name="twitter:image:src" content="<%= url_root %>main.jpg">
-    <meta name="twitter:domain" content="robsterlini.co.uk">
+    <meta name="twitter:domain" content="<%= url_base %>">
     
     <%= stylesheet_link_tag "screen" %>
     <%= yield_content(:casestudy_css) %>
