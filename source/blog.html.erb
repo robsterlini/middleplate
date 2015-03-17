@@ -1,0 +1,32 @@
+---
+title: A written insight into the world of Rob Sterlini
+priority: 0.95
+---
+
+<section id="content" class="wrapper">
+  <main id="main">
+    <article class="type group">
+    <h1>Blog</h1>
+    <h2>Recent journal posts</h2>
+    <% page_articles.take(5).each_with_index do |article, i| %>
+      <% t_name = ''; t_link = ''; article.tags.each do |tag, articles| %>
+        <% t_link = tag_path(tag); t_name = tag %>
+      <% end %>
+      <% localised_date = "<time>#{article.date.strftime("%e %b %y")}</time>" %>
+      <h3><%= link_to article.title, article %></h3>
+      <p><%= article.data.description %></p>
+      <p class="small-caps"><%= localised_date %> • <a href='<%= t_link %>' title='See other posts about <%= t_name %>'><%= t_name %></a></p>
+    <% end %>
+
+    <p class="btns--center"><a href="/archive" class="btn" title="See the rest of my blog entries">There are more in the archive</a></p>
+
+    <h2>Categories</h2>
+    <ul class="categories"><!--
+      <% blog.tags.each do |tag, articles| %>
+        --><li class="category__item"><%= link_to "#{tag}", tag_path(tag), :class => "category__link ss-cat-#{tag.to_slug}", :title => "Read the #{articles.size} posts on #{tag}" %></li><!--
+      <% end %>
+    --></ul>
+
+    </article>
+  </main>
+</section>
