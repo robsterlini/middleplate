@@ -7,22 +7,26 @@ priority: 0.95
   <main id="main">
     <article class="type group">
     <h1>Blog</h1>
-    <h2>Recent journal posts</h2>
-      <% t_name = ''; t_link = ''; article.tags.each do |tag, articles| %>
-        <% t_link = tag_path(tag); t_name = tag %>
+    <% if page_articles.count > 0 %>
+      <h2>Recent journal posts</h2>
       <% posts_to_show = defined?(default_posts) ? default_posts : 5; page_articles.take(posts_to_show.to_i).each_with_index do |article, i| %>
+        <% t_name = ''; t_link = ''; article.tags.each do |tag, articles| %>
+          <% t_link = tag_path(tag); t_name = tag %>
+        <% end %>
+        <% localised_date = "<time>#{article.date.strftime("%e %b %y")}</time>" %>
+        <h3><%= link_to article.title, article %></h3>
+        <p><%= article.data.description %></p>
+        <p class="small-caps"><%= localised_date %> • <a href='<%= t_link %>' title='See other posts about <%= t_name %>'><%= t_name %></a></p>
       <% end %>
-      <% localised_date = "<time>#{article.date.strftime("%e %b %y")}</time>" %>
-      <h3><%= link_to article.title, article %></h3>
-      <p><%= article.data.description %></p>
-      <p class="small-caps"><%= localised_date %> • <a href='<%= t_link %>' title='See other posts about <%= t_name %>'><%= t_name %></a></p>
+
+      <p class="btns--center"><a href="/archive" class="btn" title="See the rest of my blog entries">There are more in the archive</a></p>
+
+      <h2>Categories</h2>
+      <%= partial "partials/categories" %>
+    <% else %>
+      <h2>Oops!</h2>
+      <p>There aren’t any blog posts yet; looks like I’ve got some writing to do.</p>
     <% end %>
-
-    <p class="btns--center"><a href="/archive" class="btn" title="See the rest of my blog entries">There are more in the archive</a></p>
-
-    <h2>Categories</h2>
-    <%= partial "partials/categories" %>
-
     </article>
   </main>
 </section>
