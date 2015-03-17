@@ -97,6 +97,11 @@ set :default_site_title, 'Middleplate'
 set :twitter_username, 'robsterlini'
 
 # Create pages
+data.pages.pages.each do |p|
+  if p[:template]
+    proxy "#{p[:slug]}", "/templates/#{p[:template]}.html", :locals => {:page => p}
+  end
+end
 
 # Turn on Pretty URLs
 activate :directory_indexes

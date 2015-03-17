@@ -1,24 +1,54 @@
 ########
+#   PAGES BY DEFAULT
+#   ================
+#       - Home      (/)
+#       - Blog      (/blog)
+#       - Archive   (/archive)
+#
+#   OPTIONS
+#   =======
+#    - slug:           [string]    The slug of the page (must be in a slug format
+#                                  e.g. Example page -> example-page)
+#      title:          [string]    The page title (displayed in the header tag and <title>)
+#      template:       [string]    Template name (if a dynamic page)
+#      description:    [string]    Page description
+#      nav:
+#          label:      [string]    The title you want to appear in the masthead navigation
+#          alt:        [strong]    Title text for the link
+#          masthead:   [Boolean]   Switch to hide page from footer navigation
+#          footer:     [Boolean]   Switch to hide page from footer navigation
 
-navigation:
+pages:
 
-##
-
+    ## Home
     -   slug: ""
-        label: "Home"
-        alt: "Go home"
-        is_in_footer: true
+        title: "Home"
+        nav:
+            label: "Home"
+            alt: "Go home"
 
-##
-
-    -   slug: "example-page"
-        label: "Example page"
-        alt: "This is a page"
-        is_in_footer: false
-
-##
-
+    ## Blog home
     -   slug: "blog"
-        label: "Blog"
-        alt: "Read my blog"
-        is_in_footer: true
+        nav:
+            label: "Blog"
+            alt: "Read my blog"
+
+    ## Example page
+    -   slug: "example-page"
+        title: "Test123"
+        template: "generic-page"
+        description: "Here is what the page is"
+        nav:
+            label: "Example page"
+            alt: "This is a page"
+            footer: false
+
+    ## Second example page
+    -   slug: "example-page-2"
+        title: "Test123"
+        template: "generic-page"
+        description: "Here is what the page is"
+        nav:
+            label: "Test"
+            alt: "Test123"
+            footer: false
