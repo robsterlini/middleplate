@@ -5,6 +5,7 @@ A feature-rich boilerplate for Middleman
 
 1. [Installation](#installation "Installation")
 2. [Troubleshooting](#troubleshooting "Troubleshooting")
+3. [Contributors and origin](#contributors-and-origin "Contributors and origin")
 
 ## Installation
 
@@ -32,3 +33,7 @@ This will load Middleman and allow you to access your site at `http://0.0.0.0:45
 For any issues, first check the [Middleman docuimentation](https://middlemanapp.com/basics/install/ "Read the Middleman docs"), as it’s likely that there will be an answer in there (especially for installation).
 
 If you’re still having problems feel free to ping me [on Twitter](https://twitter.com/robsterlini "Get in touch via Twitter") or via [my site](https://robsterlini.co.uk/contact/ "Get in touch via my website").
+
+## Contributors and origin
+
+Middleplate is built on the [Fueled boilerplate](https://github.com/fueled/fueled-boilerplate).
