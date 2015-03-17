@@ -1,0 +1,43 @@
+########
+
+facts:
+
+##
+
+    -   title: "Not a scottish bard"
+        slug: "poet"
+        desc: "<p>My full name is Robbie (<strong>not</strong> Robert), <span class='strike'>and I’m named after the famous <a href='http://en.wikipedia.org/wiki/Robert_Burns' title='See what Wikipedia has to say about Robert Burns'>Robbie Burns</a></span> – the Scottish national treasure that is the poet who wrote <em>Auld Lang Syne</em>.</p><p>I was actually named Robbie because it was a name my parents hoped Italians could say. They can’t.</p>"
+
+##
+
+    -   title: "Inked in four places"
+        slug: "tattoo"
+        desc: "<p>I’ve got 4 tattoos. <a href='http://instagram.com/p/pE6wc1P' title='See the photo of the tattoo on Twitter'>Two ampersands</a> (BE Garamond &amp; Skolar italic), <a href='https://twitter.com/RobSterlini/status/421793229512912896' title='See the photo of the tattoo on Twitter'>an excerpt of <em><abbr title='Hail Mary'>Ave Maria</abbr></em></a> and a <a href='http://instagram.com/p/c-</em>-qwP-0d/' title='See the photo of the tattoo on Instagram'>quote about maturity</a> on the back of my ribs.</p><p>I’ll be adding more for sure, but there’s plenty of time for that so I’m in no rush to fill up just yet.</p>"
+
+##
+
+    -   title: "Life-long Spurs fan"
+        slug: "spurs"
+        desc: "<p>I’ve been a Tottenham Hotspur fan since I was old enough to kick a ball, and throughout the years I’ve amassed quite a <a href='http://instagram.com/p/sDmlBAv-02/' title='See the collection on Instagram'>collection of Lilywhite shirts</a>.</p><p>My collection includes kits signed by the likes of David Ginola, Steffen Freund, Paul Robinson, and more!</p>"
+
+########
+
+favourites:
+
+##
+
+    -   title: "food"
+        slug: "food"
+        desc: "<p>It’s a toss up between my mum’s sausage, bacon, and mushroom stew; and my dad’s hand-kneaded, home-made pizza.</p><p>Both are as good as one another, but there was no icon for the stew, so that made it easier!</p>"
+
+##
+
+    -   title: "holiday"
+        slug: "christmas"
+        desc: "<p>What’s not to love about gorging on turkey, all the trimmings, and mum’s amazing pudding selection.</p><p>I prefer Christmas to my birthday because it’s about everyone being happy. Not just me.</p><p>And the food reason again.</p>"
+
+##
+
+    -   title: "NFL team"
+        slug: "nfl"
+        desc: "<p>I’m new to the hand-egg scene, but in the few times I’ve visited ‘murica, my favourite city has been Boston, by a country mile!</p><p>The New England Patriots play in Boston, and as of the 2014/15 season I’m part of the <a href='http://instagram.com/p/ylUo3cP-8H/?modal=true' title='Check out my Super Bowl night selfie in my Gronkowski jersey'>#PatsNation</a>.</p>"

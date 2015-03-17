@@ -1,0 +1,73 @@
+/**
+ * Color SCSS File
+ */
+
+/**
+ *
+ * All color variables should start with the color- prefix, and should
+ * be descriptive to the color. $color-primary-accent is better than
+ * $color-primary, as it's easy to figure out exactly what the color
+ * is from the variable name. Avoid using specific colours for variables
+ * as these may change significantly during the build and $color-primary-red
+ * may no longer be red, but instead blue.
+ *
+ */
+
+ /* ==|== Colors =================
+ 	Base
+ ========================================== */
+
+$color-white: #f9f9f9;
+$color-black: #1b1b1b;
+
+$color-dark:  #222;
+
+$color-accent: #999;
+
+$color-alert-1: #d31b1b;
+$color-alert-2: #d3541b;
+$color-alert-3: #d3761b;
+
+$color-success: #178d14;
+
+/* ==|== Colors =================
+	Elements
+========================================== */
+
+$color-background:$color-white;
+$color-text: #333;
+
+/* ==|== Colors =================
+   Links
+====================================== */
+
+$color-link-primary: #1484b8;
+$color-link-primary-hover: darken(#0e6791,5%);
+$color-link-primary-active: $color-black;
+
+$color-link-reverse: lighten($color-link-primary,23%);
+$color-link-reverse-hover: lighten($color-link-primary,40%);
+$color-link-reverse-active: $color-white;
+
+/* ==|== Colors =================
+	Social
+========================================== */
+
+$color-s-twitter: 		#00ACED;
+$color-s-facebook: 		#3B5998;
+$color-s-instagram: 	#3F729B;
+$color-s-gplus: 			#CC3732;
+$color-s-dribbble: 		#EA4C89;
+$color-s-pinterest: 	#CC2127;
+$color-s-tumblr:			#44546B;
+$color-s-vine:				#00B489;
+$color-s-youtube: 		#CD201F;
+$color-s-medium: 			#1A1919;
+$color-s-vimeo:				#1AB7EA;
+$color-s-spotify:     #81b71a;
+$color-s-strava:      #fc4c02;
+$color-s-nike-plus:   #E95814;
+$color-s-github:      #171515;
+
+$color-b-macmillan-1: #8CC63F;
+$color-b-macmillan-2: #00A246;

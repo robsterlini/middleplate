@@ -1,0 +1,81 @@
+/**
+ * Mixins SCSS File
+ */
+
+@mixin cf() {
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+	*zoom: 1;
+}
+
+@mixin cover($type: 'absolute') {
+	height:100%;
+	left:0;
+	position: $type;
+	top:0;
+	width:100%;
+}
+
+@mixin max-height($bp) {
+	$unit: rem($bp, 16);
+	@media only screen and (max-height: $unit) {
+		@content;
+	}
+}
+
+@mixin min-height($bp) {
+	$unit: rem($bp, 16);
+	@media only screen and (min-height: $unit) {
+		@content;
+	}
+}
+
+@mixin max-width($bp) {
+	$unit: rem($bp, 16);
+	@media only screen and (max-width: $unit) {
+		@content;
+	}
+}
+@mixin min-width($bp) {
+	$unit: rem($bp + 1, 16);
+	@media only screen and (min-width: $unit) {
+		@content;
+	}
+}
+
+@mixin aspect-ratio($x, $y, $type: "max") {
+	$query: '';
+	@if $type == 'min' {
+		$query: 'min-aspect-ratio';
+	} @else {
+		$query: 'max-aspect-ratio';
+	}
+	@media ($query: #{$x}/#{$y}) {
+		@content;
+	}
+}
+
+@mixin hover {
+	&:focus,
+	&:hover,
+	&:active {
+		.hover & {
+			@content;
+		}
+	}
+}
+
+@mixin active {
+	&:active {
+		.hover & {
+			@content;
+		}
+	}
+}
+

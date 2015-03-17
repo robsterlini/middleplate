@@ -1,0 +1,33 @@
+/**
+ * Links SCSS Partial
+ *
+ * @requires framework/_colors.scss
+ */
+
+
+/* ==|== Links =================
+	Primary
+========================================== */
+
+a {
+	color:$color-link-primary;
+	transition:color .25s cubic-bezier(#{$bezier-nice});
+	text-decoration: none;
+	&:hover,
+	&:focus {
+		color:$color-link-primary-hover;
+	}
+	&:active {
+		color:$color-link-primary-active;
+	}
+	.hero &,
+	.portfolio-featured__item & {
+		color: $color-link-reverse;
+		@include hover {
+			color:$color-link-reverse-hover;
+		}
+		@include active {
+			color:$color-link-reverse-active;
+		}
+	}
+}

@@ -1,0 +1,79 @@
+########
+
+contact:
+
+##
+
+    -   title: "Email"
+        when: "For chatting about projects or asking long questions."
+        slug: "email"
+        desc: "<p>If you’ve read about <a href='/process' title='Read about my process before enquiring about a project'>my process</a> and want me on a freelance job; or you’re dying to ask a super-duper long question then email is the way forward.</p>"
+        link:
+            href: "mailto:hi@robsterlini.co.uk"
+            title: "Email me (opens an email client)"
+            text: "hi@robsterlini.co.uk"
+            footer: false
+
+
+##
+
+    -   title: "Twitter"
+        slug: "twitter"
+        when: "For asking short questions or just having a&nbsp;chat."
+        desc: "<p>If you can squeeze it into 140 of your juiciest characters then Twitter is the place to do it! Be warned though, my twitter has no profanity filter.</p>"
+        link:
+            href: "https://twitter.com/robsterlini"
+            title: "Get in touch via Twitter"
+            text: "Tweet me"
+
+##
+
+    -   title: "Dribbble"
+        slug: "dribbble"
+        when: "For checking out what I’ve been working&nbsp;on."
+        desc: "<p>This is less for contacting, more for looking. If you want to see what I’ve been doing – both with Fueled and outside of my role there – then Dribbble is the place to look.</p>"
+        link:
+            href: "https://dribbble.com/robsterlini"
+            title: "Check out my work on Dribbble"
+            text: "Follow me"
+
+
+social:
+
+##
+
+    -   title: "Instagram"
+        slug: "instagram"
+        link: https://instagram.com/robsterlini
+        alt: "For selfies and photos of food, follow me on Instagram"
+
+##
+
+    -   title: "GitHub"
+        slug: "github"
+        link: https://github.com/robsterlini
+        alt: "To check out my code, follow me on GitHub"
+
+##
+
+    -   title: "Spotify"
+        slug: "spotify"
+        link: http://open.spotify.com/user/11149305932
+        alt: "To nose on what I’ve been listening to, follow me on Spotify"
+        footer: false
+
+##
+
+    -   title: "Strava"
+        slug: "strava"
+        link: https://www.strava.com/athletes/6578573
+        alt: "To check out the cycling leg of my triathlon training, support me on Strava"
+        footer: false
+
+##
+
+    -   title: "Nike+"
+        slug: "nike-plus"
+        link: https://secure-nikeplus.nike.com/plus/profile/RobSterlini/
+        alt: "To check out the running leg of my triathlon training, friend me on Nike+"
+        footer: false

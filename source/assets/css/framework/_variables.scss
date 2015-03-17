@@ -1,0 +1,30 @@
+/**
+ * Utility SCSS File
+ */
+
+// Measure
+$measure:       16;
+$measure-unit:  rem($measure);
+
+$timing:  .25s;
+
+// Breakpoints
+$bp-miniscule:   $measure * 16;
+$bp-tiny:        $measure * 32;
+$bp-small:       $measure * 48;
+$bp-mid:         $measure * 64;
+$bp-large:       $measure * 72;
+
+// Tweakpoints
+$tp-masthead-icon:        $measure * 60;
+$tp-masthead-hamburger:   $measure * 30;
+
+// Max widths
+$layout-max-width:              $measure * 40;
+$layout-max-width-wide:         $measure * 64;
+$layout-max-width-suffix:       rem($layout-max-width);
+$layout-max-width-wide-suffix:  rem($layout-max-width-wide);
+
+// Masthead widths
+$masthead-full:       $measure-unit * 10;
+$masthead-icon:       $measure-unit * 4;

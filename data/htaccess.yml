@@ -1,0 +1,38 @@
+web:
+    domain: robsterlini.co.uk
+    url: https://www.robsterlini.co.uk
+    journal: /journal
+    case_study: /case-study
+
+redirect:
+    /youtube: /journal/youtube
+    /tri: /triathlon
+    /testimonials: /process#testimonials
+    /projects: /portfolio
+    /work: /portfolio
+    /about-me: /about
+
+cache:
+    deflate: \\.(js|css|html|ico|png|jpg)$
+    expire:
+        image/png: access plus 1 month
+        image/jpg: access plus 1 month
+        image/ico: access plus 1 month
+        image/x-icon: access plus 1 month
+        text/html: access plus 1 minute
+        text/css: access plus 7 days
+        application/javascript: access plus 7 days
+        text/javascript: access plus 7 days
+
+errors:
+    404: /404/index.html
+    403: /403/index.html
+
+short:
+    web:
+        domain: sterini.co
+        journal: /j
+        case_study: /c
+    redirect:
+        /tri: /triathlon
+        /yt: /journal/youtube

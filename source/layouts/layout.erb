@@ -1,0 +1,61 @@
+<!doctype html>
+<html class="no-js hover" lang="en-gb">
+  <head>
+    <meta charset="utf-8">
+
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    
+    <title><%= yield_content(:title) || current_page.data.title || "Web designer" %> • Rob Sterlini</title>
+
+    <% meta_description = yield_content(:meta_description) || current_page.data.description || "I’m a web designer with a love for gorgeous typography, delicious interaction, and attention to detail." %>
+    <meta name="description" content="<%= meta_description %>">
+
+    <meta name="generator" content="Static site built with Middleman">
+    <meta name="google-site-verification" content="5jq9ejVAgBm4OJjC7xaVUi3zHemfoGjU_YDDLCcHd30" />
+
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+    <link rel="shortcut icon" href="/assets/images/icons/favicon.png">
+
+    <!-- APPLE ICONS -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/assets/images/icons/icon-57.png"/>  
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/images/icons/icon-72.png"/>  
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/images/icons/icon-114.png"/> 
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/icons/icon-144.png"/>
+
+    <!-- MS ICONS -->
+    <meta name="msapplication-TileImage" content="/assets/images/icons/icon-ms.png"/>
+    <meta name="msapplication-TileColor" content="#222222"/>
+    <meta name="application-name" content="Rob Sterlini"/>
+
+    <!-- TWITTER CARDS -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@robsterlini">
+    <meta name="twitter:title" content="<%= yield_content(:title) || current_page.data.title || "Web designer" %>">
+    <meta name="twitter:description" content="<%= meta_description %>">
+    <meta name="twitter:creator" content="@robsterlini">
+    <meta name="twitter:image:src" content="<%= url_root %><%= yield_content(:hero_loc) || hero_dir %><%= current_page.data.hero || yield_content(:hero) || current_page.data.card_image || "main.jpg" %>">
+    <meta name="twitter:domain" content="robsterlini.co.uk">
+    
+    <%= stylesheet_link_tag "screen" %>
+    <%= yield_content(:casestudy_css) %>
+  </head>
+  
+  <body class="<%= page_classes %>" data-js="toggled-navigation-parent">
+    <% if !current_page.data.no_masthead %>
+        <%= partial "partials/masthead" %>
+    <% end %>
+    <!--[if lt IE 8]>
+      <div class="error">
+        <div class="group">
+            <p>Come on, it’s 2015. <a href="http://browsehappy.com" title="Find out about updating your browser here">Update your browser</a>, or stuff is going to look a bit upside down! Don’t say I didn’t warn you!</p>
+        </div>
+      </div>
+    <![endif]-->
+    <%= yield %>
+    <% if !current_page.data.no_footer %>
+        <%= partial "partials/footer" %>
+    <% end %>
+    <%= partial "partials/scripts" %>
+  </body>
+</html>

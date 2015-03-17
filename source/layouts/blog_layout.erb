@@ -1,0 +1,31 @@
+<% wrap_layout :layout do %>
+  <% t_name = ''; t_link = ''; current_article.tags.each do |tag, articles| %>
+    <% t_link = tag_path(tag); t_name = tag %>
+  <% end %>
+  <% localised_date = current_article.date.strftime("%b %e") %>
+  <main id="main">
+    <article class="group" data-anchors>
+      <h1><%= current_article.title %></h1>
+      <p><%= current_article.data.description %></p>
+      <% if current_article.data.tldr %>
+        <aside class="article__tldr">
+          <p id="tldr"><strong><abbr title="Too long didn’t read">TL;DR</abbr></strong> <em><%= current_article.data.tldr %></em></p>
+        </aside>
+      <% end %>
+      <%= yield %>
+      <p class="btns--center">
+        <% full_url = "#{url_short}/j#{current_article.url.sub '/journal', ''}"; url_encoded = URI.encode(full_url, /\W/) %>
+        <a class="btn twitter-popup love-it" id="twitter-link" href="http://twitter.com/share?text=%E2%80%98<%= URI.encode(current_article.title, /\W/)  %>%E2%80%99%20%40RobSterlini%20%E2%80%93&url=<%= url_encoded %>" title="Loved the article? Share it on Twitter!">Loved it!</a>
+      </p>
+      <h3>Why not read another?</h3>
+      <p class="btns--center btns--read-more">
+        <% prev_article = current_article.previous_article; if prev_article %>
+          <a class="btn" href="<%= prev_article.url %>" rel="prev" title="Previous article: <%= prev_article.title %>"><%= prev_article.title %></a>
+        <% end %>
+        <% next_article = current_article.next_article; if next_article %>
+          <a class="btn" href="<%= next_article.url %>" rel="next" title="Next article: <%= next_article.title %>"><%= next_article.title %></a>
+        <% end %>
+      </p>
+    </article>
+  </main>
+<% end %>

@@ -1,0 +1,60 @@
+/**
+ * Base SCSS File
+ *
+ * @requires _type.scss, _color.scss
+ */
+
+*,
+*:before,
+*:after {
+	box-sizing:border-box;
+}
+
+html,body {
+	min-height:100%;
+}
+
+html {
+	background: $color-background;
+	font-size:percentage($font-default-size / 16);
+	overflow-y: scroll;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+	color:$color-text;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	font-family: $font-stack-regular;
+}
+
+body {
+	font-size:1em;
+	line-height:$font-default-line-height;
+	display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.body--404 {
+	background:lighten($color-black,2%);
+	color:$color-white;
+	text-shadow:none;
+}
+
+.body--no-scroll {
+	overflow: hidden;
+}
+
+::selection {
+	background:$color-black;
+	text-shadow:none;
+	color:$color-white;
+}
+::-moz-selection {
+	background:$color-black;
+	text-shadow:none;
+	color:$color-white;
+}

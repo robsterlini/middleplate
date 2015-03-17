@@ -1,0 +1,20 @@
+/* =============================================================================
+   Module Partials
+========================================================================== */
+
+/**
+ * Including SCSS Partial. Keeps screen.scss neater.
+ */
+
+
+@import "_layout";
+
+@import "_links";
+@import "_buttons";
+
+@import "_typography";
+
+@import "_lists";
+@import "_images";
+@import "_embed";
+@import "_code";

@@ -1,0 +1,24 @@
+---
+---
+<% content_for(:title, "#{tagname}") %>
+<section id="content" class="wrapper">
+  <main id="main">
+    <article class="group">
+      <h1><%= tagname %></h1>
+
+      <% page_articles.each_with_index do |article, i| %>
+        <% localised_date = "<time>#{article.date.strftime("%a %e %b")}</time>" %>
+        <h3><%= link_to article.title, article %></h3>
+        <p><%= article.data.description %></p>
+        <p class="small-caps"><%= localised_date %></p>
+      <% end %>
+
+      <h2>All categories</h2>
+      <ul class="categories"><!--
+        <% blog.tags.each do |tag, articles| %>
+          --><li class="category__item"><%= link_to "#{tag}", tag_path(tag), :class => "category__link ss-cat-#{tag.to_slug}", :title => "Read the #{articles.size} posts on #{tag}" %></li><!--
+        <% end %>
+      --></ul>
+    </article>
+  </main>
+</section>

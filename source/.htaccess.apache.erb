@@ -1,0 +1,37 @@
+# REMOVE WWW
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1%{REQUEST_URI} [R=301,QSA,NC,L]
+
+# MOVE PERMANENTLY
+<% data.htaccess.redirect.each do |old, new| %>
+Redirect 301 <%= old %> <%= data.htaccess.web.url %><%= new %>
+<% end %>
+
+# SSL REDIRECT
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# REMOVE index.html
+RewriteCond %{THE_REQUEST} /index\.html? [NC]
+RewriteRule ^(.*/)?index\.html?$ /$1 [R=301,L]
+
+# ERROR DOCUMENTS
+<% data.htaccess.errors.each do |code, document| %>
+ErrorDocument <%= code %> <%= document %>
+<% end %>
+
+# GZIP, CACHE
+AddType image/x-icon .ico
+
+# CACHE ERRRYTHANG
+ExpiresActive on
+<% data.htaccess.cache.expire.each do |type, expire| %>
+ExpiresByType <%= type %> "<%= expire %>"
+<% end %>
+
+# DEFLATE
+<FilesMatch "<%= data.htaccess.cache.deflate %>">
+    SetOutputFilter DEFLATE
+</FilesMatch>

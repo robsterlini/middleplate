@@ -1,0 +1,256 @@
+/**
+ * Typography SCSS Partial
+ *
+ * @requires framework/_type.scss
+ */
+
+/* ==|== Typography =================
+	Load Typefaces from type.scss
+========================================== */
+
+/**
+ * Loads in the CSS font-face declarations based on a Sass list of fonts and their styles
+ * Set the number of fonts that you want to load in in $fonts-total
+ * Set the fonts themselves and make sure they're in the assets/fonts folder
+ * Set the styles for the fonts, if Font-number-1 is a regular weight put normal,
+ * if Font-number-2 is an italic weight put italic etc
+**/
+
+@font-face {
+	font-family: 'SkolarLatin';
+	src: url('../fonts/SkolarLatin-Regular.eot');
+	src: url('../fonts/SkolarLatin-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/SkolarLatin-Regular.woff') format('woff'),
+		url('../fonts/SkolarLatin-Regular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'SkolarLatin';
+	src: url('../fonts/SkolarLatin-Italic.eot');
+	src: url('../fonts/SkolarLatin-Italic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/SkolarLatin-Italic.woff') format('woff'),
+		url('../fonts/SkolarLatin-Italic.woff2') format('woff2');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'SkolarLatin';
+	src: url('../fonts/SkolarLatin-Bold.eot');
+	src: url('../fonts/SkolarLatin-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/SkolarLatin-Bold.woff') format('woff'),
+		url('../fonts/SkolarLatin-Bold.woff2') format('woff2');
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+/* ==|== Typography =================
+	1. Headings
+========================================== */
+
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+	@include font-feature-settings(liga kern onum);
+	max-width:$layout-max-width-suffix;
+}
+
+h1,
+h2,
+h3 {
+	font-weight: $font-weight-bold;
+}
+h1 {
+	@include font-size(52);
+	line-height:1.15;
+	margin:rem(72) auto rem(24);
+  @include max-width($bp-small) {
+    @include font-size(42);
+    // margin-top: rem(64);
+  }
+  @include max-width($bp-tiny) {
+    @include font-size(34);
+    // margin-top: rem(48);
+  }
+  & + h2 {
+  	padding-top: rem(28);
+  }
+}
+
+h2 {
+	@include font-size(32);
+	line-height:1.35;
+	margin:0 auto rem(12);
+	padding-top:rem(48);
+	@include max-width($bp-small) {
+		@include font-size(28);
+	}
+	@include max-width($bp-tiny) {
+		@include font-size(24);
+	}
+}
+
+h3 {
+	@include font-feature-settings(smcp c2sc);
+	@include font-size(25);
+	margin:rem(24) auto rem(16);
+	line-height:1.05;
+	@include max-width($bp-small) {
+		@include font-size(22);
+	}
+	@include max-width($bp-tiny) {
+		@include font-size(19);
+	}
+}
+
+h4 {
+	@include font-size(30);
+	margin:em(8, 30) auto em(16, 30);
+}
+
+h5 {
+	@include font-size(24);
+	margin:em(12, 24) auto em(12, 24);
+}
+
+h6 {
+	@include font-size(20);
+	margin:em(10, 20) auto em(10, 20);
+}
+
+.heading--has-anchor {
+	text-indent:rem(-35);
+	@include max-width($bp-mid) {
+		text-indent:0;
+	}
+}
+.heading--anchor {
+	width:rem(35);
+	padding-right:rem(5);
+	text-indent:0;
+	text-align: right;
+	display: inline-block;
+	@include max-width($bp-mid) {
+		width:auto;
+	}
+}
+.heading--clear {
+	clear: both;
+}
+
+/* ==|== Typography =================
+	Paragraphs
+========================================== */
+%paragraph {
+	@include font-size(18);
+	line-height:1.45;
+	margin:rem(6) auto rem(12);
+	@include max-width($bp-small) {
+		@include font-size(17);
+	}
+	@include max-width($bp-tiny) {
+		@include font-size(16);
+	}
+}
+p {
+	@extend %paragraph;
+}
+
+.small-caps,
+.sc {
+	@include font-feature-settings(smcp c2sc lnum kern);
+}
+.small-caps {
+	line-height: 1.1;
+}
+
+blockquote {
+	font-weight: $font-weight-normal;
+	font-style:italic;
+	margin:rem(15) auto;
+	max-width:$layout-max-width-suffix;
+	border-left:lighten($color-accent,15%) solid rem(2);
+	padding-left:rem(23);
+	& + &,
+	.article__description + & {
+		margin-top: rem(30);
+	}
+	p {
+		@include font-size(24);
+		@include max-width($bp-small) {
+			@include font-size(22);
+		}
+		@include max-width($bp-tiny) {
+			@include font-size(20);
+		}
+	}
+	&.blockquote--long {
+		p {
+			@extend %paragraph;
+		}
+	}
+	cite {
+		font-style: normal;
+		display: block;
+		@include font-size(18);
+		margin-top: rem(5);
+		@include max-width($bp-small) {
+			@include font-size(17);
+		}
+		@include max-width($bp-tiny) {
+			@include font-size(16);
+		}
+		&:before {
+			content:'— ';
+		}
+	}
+}
+
+abbr[title] {
+	border:0;
+	background: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQgMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNCAyIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cmVjdCBmaWxsPSIjMzMzMzMzIiB3aWR0aD0iMiIgaGVpZ2h0PSIyIi8+PC9zdmc+) repeat-x left 88%;
+	background-size:rem(2) rem(1);
+}
+
+.strike {
+	.no-js & {
+		text-decoration: line-through;
+	}
+	[class^="strike__strikethrough--"] {
+		color: rgba($color-text, 0.25);
+		cursor: help;
+		text-decoration: none;
+		position: relative;
+		transition:all .25s cubic-bezier(#{$bezier-nice});
+		&:before {
+			background: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDE2MCA1MCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTYwIDUwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48Zz48cGF0aCBmaWxsPSIjQ0UwNjEzIiBkPSJNOTguNiw0NS4zYy0wLjMsMC0wLjctMC4xLTEtMC4zYy0xLjEtMC42LTEuNC0yLTAuOS00bDcuNS0yOWMtMi45LDMuMi0xMy45LDE0LjgtMjAuNCwxNC44Yy0yLjcsMC01LjQsMS4xLTcuMywxLjhjLTIuMSwwLjgtMy41LDEuNC00LjYsMC42Yy0wLjMtMC4yLTAuOS0wLjgtMC45LTEuOWMwLTAuMiwwLTAuMywwLjEtMC41bDYuNC0xNy42TDU1LjgsMzkuNWMtMS43LDIuMS0zLjEsMi4xLTMuOSwxLjhDNTEsNDEsNDkuOSw0MC4xLDUwLDM3LjVjMCwwLDAtMC4xLDAtMC4xTDUyLDE1TDQwLjYsMzEuM2MtMS43LDIuMi0zLjIsMi4xLTMuOSwxLjljLTAuNy0wLjItMi0xLTIuMS0zLjdjMC0wLjEsMC0wLjEsMC0wLjJsMC44LTExLjh2MGwtMTgsMTguNGMtMiwxLjgtMy41LDEuNi00LjMsMS4zYy0wLjgtMC4zLTIuMS0xLjItMi4yLTMuOGMwLTAuMSwwLTAuMSwwLTAuMmwwLjYtMTUuN2MtMC45LDEuMy0zLjEsNC41LTQuOCw2LjFjLTAuNCwwLjQtMy4yLDMuMi02LjksMy4yYy0wLjgsMC0xLjUtMC43LTEuNS0xLjVzMC43LTEuNSwxLjUtMS41YzIuNSwwLDQuNy0yLjMsNC43LTIuM2MwLDAsMC4xLTAuMSwwLjEtMC4xYzEuOS0xLjcsNC44LTYuMiw0LjgtNi4yYzEuMy0xLjgsMi42LTIuNCwzLjgtMS45YzEuMSwwLjUsMS42LDEuOCwxLjMsMy44TDE0LDMzLjNjMC4xLDAuOCwwLjMsMS4xLDAuNCwxLjJjMC4xLDAsMC41LTAuMSwxLjEtMC43bDE4LTE4LjRjMS43LTEuOSwzLTEuOSwzLjgtMS41YzAuOCwwLjQsMS42LDEuNCwxLjIsMy45bC0wLjgsMTEuNmMwLDAuMywwLDAuNSwwLjEsMC42YzAuMS0wLjEsMC4zLTAuMywwLjUtMC41bDEyLjktMTguNmMwLjYtMC45LDEuOC0yLjgsMy4zLTIuMWMxLjUsMC43LDEsMi42LDAuNywzLjhsLTIuMiwyNWMwLDAuMiwwLDAuNCwwLDAuNWMwLjEtMC4xLDAuMi0wLjMsMC40LTAuNGwyMi45LTMyYzAsMCwwLjEtMC4xLDAuMS0wLjFDNzYuOSw1LDc4LjUsMy4yLDgwLjIsNGMxLjcsMC44LDEuMSwzLjIsMSw0YzAsMC4xLDAsMC4xLTAuMSwwLjJsLTYuNSwxNy45YzAuMy0wLjEsMC42LTAuMiwwLjktMC4zYzIuMi0wLjksNS4yLTIsOC40LTJjNC4zLDAsMTMuOC04LjgsMTguNy0xNC40YzAsMCwwLjEtMC4xLDAuMS0wLjFjMS42LTEuNCwzLTEuOCw0LTFjMSwwLjcsMS4yLDIuMSwwLjUsNEwxMDAsNDAuN2wyNy41LTM1LjNjMC4xLTAuMSwwLjEtMC4xLDAuMi0wLjJjMS45LTEuOCwzLjMtMS42LDQuMS0xLjFjMC44LDAuNSwxLjYsMS41LDEsNC4xbC0zLDE2LjdjLTAuMSwwLjQsMCwwLjYsMCwwLjhjMC4yLTAuMSwwLjQtMC4yLDAuNy0wLjVsMjMuMS0xNy40YzIuMy0xLjYsMy43LTEsNC4zLTAuNmMwLjYsMC40LDEuNiwxLjYsMC44LDQuMmwtNC41LDEzLjZjMC42LTAuMSwxLjQtMC4zLDItMC41YzEtMC4zLDIuMi0wLjYsMy40LTAuOGMwLjgtMC4xLDEuNiwwLjQsMS43LDEuMmMwLjEsMC44LTAuNCwxLjYtMS4yLDEuN2MtMSwwLjItMi4xLDAuNC0zLjEsMC43Yy0yLjIsMC42LTQsMS4xLTUuMiwwYy0wLjQtMC40LTAuOS0xLjEtMC43LTIuNWMwLTAuMSwwLTAuMiwwLjEtMC4zbDQuNy0xNC4yYzAuMS0wLjMsMC4xLTAuNSwwLjEtMC43Yy0wLjIsMC4xLTAuNCwwLjItMC43LDAuNGwtMjMsMTcuM2MtMiwxLjctMy41LDEuMy00LjEsMC45Yy0wLjctMC40LTEuOC0xLjQtMS40LTQuMWwzLTE2LjhjMC0wLjEsMC0wLjIsMC4xLTAuM2MwLDAtMC4xLDAuMS0wLjEsMC4xbC0yOC4xLDM2LjFjMCwwLTAuMSwwLjEtMC4xLDAuMUMxMDAuNSw0NC43LDk5LjUsNDUuMyw5OC42LDQ1LjN6Ii8+PC9nPjwvc3ZnPg==) left center no-repeat;
+			background-size: 100% 100%;
+			content: '';
+			left: 0;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			transition: inherit;
+			width: 100%;
+		}
+	}
+	.strike__strikethrough--tiny {
+		&:before {
+			background-size: 400% 100%;
+		}
+	}
+	.strike__strikethrough--short {
+		&:before {
+			background-size: 200% 100%;
+		}
+	}
+}
+p {
+	@include hover {
+		[class^="strike__strikethrough--"] {
+			color: rgba($color-text, 0.5);
+			&:before {
+				opacity: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,56 @@
+########
+
+masthead:
+
+##
+
+    -   slug: ""
+        icon: "home"
+        abbr:
+            label: "A casa mia"
+            title: "Home"
+        alt: "Go home"
+
+##
+
+    -   slug: "portfolio"
+        icon: "projects"
+        label: "My work"
+        alt: "See my life’s work"
+
+##
+
+    -   slug: "process"
+        label: "My process"
+        alt: "Find out how I do it"
+
+##
+
+    -   slug: "journal"
+        label: "The journal"
+        alt: "Read what’s on my mind"
+
+##
+
+    -   slug: "about"
+        label: "About me"
+        alt: "Find out about me"
+
+##
+
+    -   slug: "contact"
+        label: "Say hi"
+        alt: "Get in touch"
+
+##
+
+    -   slug: "bucket-list"
+        icon: "bucket"
+        label: "Bucket list"
+        alt: "Check out my life goals"
+
+##
+
+    -   slug: "triathlon"
+        label: "Tri rookie"
+        alt: "Follow me on my road to my first triathlon"
