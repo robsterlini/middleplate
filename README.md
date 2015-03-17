@@ -4,6 +4,7 @@ A feature-rich boilerplate for Middleman
 ## TOC
 
 1. [Installation](#installation "Installation")
+2. [Troubleshooting](#troubleshooting "Troubleshooting")
 
 ## Installation
 
@@ -26,3 +27,8 @@ bundle exec middleman
 
 This will load Middleman and allow you to access your site at `http://0.0.0.0:4567` or `localhost:4567` (unless you’ve set a different default port).
 
+## Troubleshooting
+
+For any issues, first check the [Middleman docuimentation](https://middlemanapp.com/basics/install/ "Read the Middleman docs"), as it’s likely that there will be an answer in there (especially for installation).
+
+If you’re still having problems feel free to ping me [on Twitter](https://twitter.com/robsterlini "Get in touch via Twitter") or via [my site](https://robsterlini.co.uk/contact/ "Get in touch via my website").
