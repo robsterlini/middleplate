@@ -36,4 +36,4 @@ If you’re still having problems feel free to ping me [on Twitter](https://twit
 
 ## Contributors and origin
 
-Middleplate is built on the [Fueled boilerplate](https://github.com/fueled/fueled-boilerplate).
+Middleplate is built on the [Fueled boilerplate](https://github.com/fueled/fueled-boilerplate). Find out more about Fueled at [fueled.com](http://fueled.com "Visit the Fueled website").
