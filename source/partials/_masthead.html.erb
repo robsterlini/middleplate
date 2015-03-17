@@ -3,13 +3,15 @@
     <div class="masthead__logo"><%= default_site_title %></div>
   </div>
   <nav class="nav">
-    <ul class="nav__list">
-      <!--<% data.pages.navigation.each do |nav| %>
-        --><li class="nav__item">
-          <a title="<%= nav.alt %>" class="nav__link--<%= nav.icon || nav.slug %> ss-nav-<%= nav.icon || nav.slug %>" href="/<%= nav.slug %>"><%= nav.label %></a>
-        </li><!--
-      <% end %>-->
-    </ul>
+    <ul class="nav__list"><!--
+      <% data.pages.pages.each do |nav| %>
+        <% if nav.nav.masthead != false %>
+          --><li class="nav__item">
+            <a title="<%= nav.nav.alt %>" class="nav__link--<%= nav.slug != "" ? nav.slug : "home" %>" href="/<%= nav.slug %>"><%= nav.nav.label %></a>
+          </li><!--
+        <% end %>
+      <% end %>
+    --></ul>
   </nav>
 </header>
 <div class="btns--menu btns--sizing">
