@@ -14,7 +14,7 @@
       <% end %>
       <%= yield %>
       <p class="btns--center">
-        <% full_url = "#{url_short}/j#{current_article.url.sub '/journal', ''}"; url_encoded = URI.encode(full_url, /\W/) %>
+        <% full_url = "#{url_root}#{current_article.url}"; url_encoded = URI.encode(full_url, /\W/) %>
         <a class="btn twitter-popup love-it" id="twitter-link" href="http://twitter.com/share?text=%E2%80%98<%= URI.encode(current_article.title, /\W/)  %>%E2%80%99%20%40RobSterlini%20%E2%80%93&url=<%= url_encoded %>" title="Loved the article? Share it on Twitter!">Loved it!</a>
       </p>
       <h3>Why not read another?</h3>
