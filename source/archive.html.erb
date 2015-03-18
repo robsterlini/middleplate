@@ -15,7 +15,7 @@ description: This is a year-sorted archive of posts
               <% t_link = tag_path(tag); t_name = tag %>
             <% end %>
             <% localised_date = "<time>#{article.date.strftime("%e %b %y")}</time>" %>
-            <h3><%= link_to article.title, article %></h3>
+            <h3><%= link_to article.title, article, title: "Read #{article.title}" %></h3>
             <p class="small-caps"><%= localised_date %> • <a href='<%= t_link %>' title='See other posts about <%= t_name %>'><%= t_name %></a></p>
           <% end %>
         <% end %>
