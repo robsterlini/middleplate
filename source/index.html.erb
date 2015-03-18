@@ -5,3 +5,12 @@ no_footer: false
 no_masthead: false
 priority: 1.0
 ---
+
+<h1>Homepage</h1>
+<p class="paragraph--pullout">This page will serve as a little introduction to how the boilerplate is built.</p>
+<p>For full documentation or if you delete this during development (which you probably should), check out the <%= link_to "the repository on GitHub", "https://github.com/robsterlini/middleplate", title: "Fork Middleplate on Github" %>.</p>
+<h2>Page structure and creation</h2>
+<p class="paragraph--pullout">This is the homepage and uses custom code held in the <code>index.html.erb</code> file.</p>
+<p>Similarly to the <%= link_to "custom page", "/custom-page.html", title: "Custom page" %>, this can be fully customised to deliver whatever markup you so desire.</p>
+<p>The two example pages – <%= link_to "example one", "/example-page.html", title: "Example page" %> &amp; <%= link_to "example two", "/example-page-2.html", title: "Example page two" %> – use the template <code>generic-page.html.erb</code> found in the <code>source/templates</code> directory; taking content from their respective markdown files in the <code>source/content</code> directory.</p>
+<p>To create more template-based pages simply add more entries into the <code>pages.yml</code> file in the <code>data</code> directory, ensuring that you have declared a valid template.</p>
