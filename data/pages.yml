@@ -45,8 +45,8 @@ pages:
         template: "generic-page"
         description: "Here is what the page is"
         nav:
-            label: "Example page"
-            alt: "This is a page"
+            label: "Example one"
+            alt: "This is page using the generic-page template"
             footer: false
 
     ## Second example page
@@ -55,6 +55,14 @@ pages:
         template: "generic-page"
         description: "Here is what the page is"
         nav:
-            label: "Test"
-            alt: "Test123"
+            label: "Example two"
+            alt: "This is another page also using the generic-page template"
             footer: false
+
+    ## Custom page
+    -   slug: "custom-page"
+        title: "Custom page"
+        description: "This is a page with a custom template as defined in the /source folder as custom-page.html.erb"
+        nav:
+            label: "Custom Page"
+            alt: "A page with a custom template"
