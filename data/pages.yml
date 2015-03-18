@@ -7,16 +7,16 @@
 #
 #   OPTIONS
 #   =======
-#    - slug:           [string]    The slug of the page (must be in a slug format
-#                                  e.g. Example page -> example-page)
-#      title:          [string]    The page title (displayed in the header tag and <title>)
-#      template:       [string]    Template name (if a dynamic page)
-#      description:    [string]    Page description
+#    - slug:           [string]    required     The slug of the page (must be in a slug format
+#                                               e.g. Example page -> example-page)
+#      title:          [string]    required     The page title (displayed in the header tag and <title>)
+#      template:       [string]    optional     Template name (if a dynamic page)
+#      description:    [string]    required     Page description
 #      nav:
-#          label:      [string]    The title you want to appear in the masthead navigation
-#          alt:        [strong]    Title text for the link
-#          masthead:   [Boolean]   Switch to hide page from footer navigation
-#          footer:     [Boolean]   Switch to hide page from footer navigation
+#          label:      [string]    required     The title you want to appear in the masthead navigation
+#          alt:        [strong]    required     Title text for the link
+#          masthead:   [Boolean]   optional     Switch to hide page from footer navigation
+#          footer:     [Boolean]   optional     Switch to hide page from footer navigation
 
 pages:
 
