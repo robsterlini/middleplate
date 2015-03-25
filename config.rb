@@ -56,28 +56,6 @@ String.class_eval do
   end
 end
 
-#Create full image markup helper
-helpers do
-  def blog_image(image, caption, alt, position)
-    "<div class='figure-wrap#{position == "half" ? " figure-wrap--half" : ""}'>
-      <noscript>
-        <figure class='image--#{position}'>  
-          <img src='#{image}' alt='#{alt}' title='#{caption}'>
-          <figcaption class='ss-picture'>#{caption}</figcaption>
-        </figure>
-      </noscript>
-      <figure class='image--#{position} ss-picture image--to-load'>
-        <img src='/assets/images/helpers/image-placeholder.png'
-          data-src='#{image}'
-          data-js='lazy-load-image'
-          alt='#{alt}'
-          title='#{caption}'>
-        <figcaption class='ss-picture'>#{caption}</figcaption>
-      </figure>
-    </div>"
-  end
-end
-
 # Set directories
 set :css_dir, 'assets/css'
 set :js_dir, 'assets/js'
@@ -150,9 +128,6 @@ configure :build do
 
   # Enable cache buster
   # activate :asset_hash
-
-  # Use relative URLs
-  # activate :relative_assets
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
