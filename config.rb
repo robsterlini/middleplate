@@ -83,6 +83,9 @@ data.pages.pages.each do |p|
   end
 end
 
+# Use relative URLs
+activate :relative_assets
+
 # Turn on Pretty URLs
 activate :directory_indexes
 
