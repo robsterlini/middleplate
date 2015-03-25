@@ -1,15 +1,16 @@
 # middleplate
-A feature-rich boilerplate for Middleman
+A feature-rich boilerplate for Middleman by [Rob Sterlini](https://robsterlini.co.uk "Visit my website").
 
 ## TOC
 
 1. [Installation](#installation "Installation")
-2. [Development](#development "Development")
+1. [Development](#development "Development")
 	1. [File structure](#file-structure "File Structure")
-2. [Checklist](#checklist "Checklist")
-2. [Deployment](#deployment "Deployment")
-2. [Troubleshooting](#troubleshooting "Troubleshooting")
-3. [Contributors and origin](#contributors-and-origin "Contributors and origin")
+	1. [Assets](#assets-1 "Assets") 
+	1. [Checklist](#checklist "Checklist")
+1. [Deployment](#deployment "Deployment")
+1. [Troubleshooting](#troubleshooting "Troubleshooting")
+1. [Contributors and origin](#contributors-and-origin "Contributors and origin")
 
 ## Installation
 
@@ -51,9 +52,9 @@ people:
             -   species: "Dog"
                 type: "Pug"
                 name: "Captain Pugwash"
-    -		name: "Josephine Doe"
-    		title: "CFO"
-    		dob: "01/01/1963"
+    -   name: "Josephine Doe"
+        title: "CFO"
+        dob: "01/01/1963"
 ```
 
 #### Source
@@ -64,7 +65,7 @@ The `source` directory will be your main port of call and contains almost all of
 
 #### Assets
 
-This is where your site assets live (obviously), read the [assets section](#assets "Assets") to find out more about the individual filesets in action here.
+This is where your site assets live (obviously), read the [assets section](#assets-1 "Assets") to find out more about the individual filesets in action here.
 
 #### Content
 
@@ -140,7 +141,7 @@ This generates a wizzy .htaccess file (using the information you’ve set in `da
 
 ### Assets
 
-## Checklist
+### Checklist
 
 ## Deployment
 
