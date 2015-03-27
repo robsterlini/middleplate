@@ -1,28 +1,32 @@
 /**
- * Disqus comments partial
+ * Social sharing file
+ *
+ * Creates functionality for opening Twitter popup window to share
  */
 
 g.share = function() {
   var self = g.share;
 
   self.selectors = {
-    html: "html"
+    twitterButton: "[data-js='share-on-twitter']"
   }
   self.classes = {
-    start:  'animate--start',
-    end:    'animate--end'
+    success: "btn--twitter-shared"
+  }
+  self.variables = {
+    success: "Thanks!"
   }
 
-  $(document).on('click', '.twitter-popup', function(e) {
+  $(document).on('click', self.selectors.twitterButton, function(e) {
     e.preventDefault();
     var width  = 575, height = 400,
     left = ($(window).width()  - width) / 2,
     top = ($(window).height() - height) / 2,
-    articleTitle = $('section h1:first').text();
+    articleTitle = $('h1:first').text();
     url = this.href;
     opts='status=1'+',width='+width+',height='+height+',top='+top+',left='+left;
     window.open(url, 'twitter', opts);
-    $(this).html('Thanks!').addClass('icon-smile loved-it-success');
+    $(this).html(self.variables.success).addClass(self.classes.success);
   });
 
 };
