@@ -11,7 +11,7 @@
 
 a {
 	color:$color-link-primary;
-	transition:color .25s cubic-bezier(#{$bezier-nice});
+	transition:color $timing cubic-bezier(#{$bezier-nice});
 	text-decoration: none;
 	&:hover,
 	&:focus {

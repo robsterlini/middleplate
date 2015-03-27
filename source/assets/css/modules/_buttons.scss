@@ -57,11 +57,11 @@
 	border-radius: $btn-radius;
 	display: inline-block;
 	padding:rem(10) rem(15) rem(9);
-	transition:all .25s cubic-bezier(#{$bezier-nice});
 	width:auto;
 	line-height:1.3;
 	text-decoration: none;
 	margin:rem(5) rem(10) rem(5);
+	transition: all $timing cubic-bezier(#{$bezier-nice});
 	@include active {
 		transform:scale(0.95,0.95);
 	}
