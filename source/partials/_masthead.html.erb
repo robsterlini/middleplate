@@ -1,18 +1,18 @@
 <header class="masthead">
   <div class="group">
     <div class="masthead__logo"><%= default_site_title %></div>
-  </div>
-  <nav class="nav">
-    <ul class="nav__list"><!--
-      <% data.pages.pages.each do |nav| %>
-        <% if nav.nav.masthead != false %>
-          --><li class="nav__item">
-            <a title="<%= nav.nav.alt %>" class="nav__link--<%= nav.slug != "" ? nav.slug : "home" %>" href="/<%= nav.slug %>"><%= nav.nav.label %></a>
-          </li><!--
+    <nav class="nav">
+      <ul class="nav__list"><!--
+        <% data.pages.pages.each do |nav| %>
+          <% if nav.nav.masthead != false %>
+            --><li class="nav__item">
+              <a title="<%= nav.nav.alt %>" class="nav__link--<%= nav.slug != "" ? nav.slug : "home" %>" href="/<%= nav.slug %>"><%= nav.nav.label %></a>
+            </li><!--
+          <% end %>
         <% end %>
-      <% end %>
-    --></ul>
-  </nav>
+      --></ul>
+    </nav>
+  </div>
 </header>
 <div class="btns--menu btns--sizing">
   <a href="#menu" class="btn nav__toggle" data-js="toggle-navigation"><span class="btn__label">Menu</span></a>
