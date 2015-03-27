@@ -13,7 +13,7 @@ ol {
 	list-style: circle outside none;
 	padding:0 rem(25);
 	& > li {
-		max-width:$layout-max-width-suffix;
+		max-width:$layout-max-width-unit;
 		& > ul {
 			list-style:disc outside none;
 			margin:0;

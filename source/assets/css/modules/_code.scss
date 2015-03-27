@@ -16,7 +16,7 @@ pre {
   max-width:rem($layout-max-width + (25 * 2));
   @include font-size(14);
   code {
-    max-width:$layout-max-width-suffix;
+    max-width:$layout-max-width-unit;
     @include font-size(14);
     display: block;
     margin:0 auto;

@@ -25,8 +25,8 @@ $tp-masthead-hamburger:   $measure * 30; // 480
 // Max widths
 $layout-max-width:              $measure * 40;
 $layout-max-width-wide:         $measure * 64;
-$layout-max-width-suffix:       rem($layout-max-width);
-$layout-max-width-wide-suffix:  rem($layout-max-width-wide);
+$layout-max-width-unit:       rem($layout-max-width);
+$layout-max-width-wide-unit:  rem($layout-max-width-wide);
 
 // Masthead widths
 $masthead-full:       $measure-unit * 10;

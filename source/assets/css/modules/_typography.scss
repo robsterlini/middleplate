@@ -10,8 +10,8 @@
 
 h1, h2, h3, h4, h5, h6, p, ul, ol {
 	@include font-feature-settings(liga kern onum);
-	max-width:$layout-max-width-suffix;
 	line-height: $font-default-line-height;
+	max-width: $layout-max-width-unit;
 }
 
 h1 {
@@ -114,12 +114,12 @@ blockquote {
 	font-weight: $font-weight-normal;
 	font-style:italic;
 	margin:rem(15) auto;
-	max-width:$layout-max-width-suffix;
 	border-left:lighten($color-accent,15%) solid rem(2);
 	padding-left:rem(23);
 	& + &,
 	.article__description + & {
 		margin-top: rem(30);
+	max-width: $layout-max-width-unit;
 	}
 	p {
 		@include font-size(24);
