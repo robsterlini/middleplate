@@ -52,45 +52,45 @@
 ========================================== */
 
 %btn {
-	font-weight: $font-weight-bold;
 	border: $btn-border solid $color-link-primary;
 	border-radius: $btn-radius;
 	display: inline-block;
-	width:auto;
+	font-weight: $font-weight-bold;
 	line-height:1.3;
 	margin: $measure-unit / 2 $measure-unit $measure-unit / 2;
 	padding: $measure-unit / 2 $measure-unit rem($measure / 2 + 1);
 	text-decoration: none;
 	transition: all $timing cubic-bezier(#{$bezier-nice});
+	width: auto;
 	@include active {
-		transform:scale(0.95,0.95);
+		transform: scale(0.95, 0.95);
 	}
 }
 .btn {
 	@extend %btn;
-	background:$color-link-primary;
-	color:$color-white;
+	background: $color-link-primary;
+	color: $color-white;
 	text-shadow: none;
 	@include hover {
-		background:$color-link-primary-hover;
-		border-color:$color-link-primary-hover;
-		color:$color-white;
+		background: $color-link-primary-hover;
+		border-color: $color-link-primary-hover;
+		color: $color-white;
 	}
 	.btns--read-more & {
-		width:100%;
 		max-width: $measure-unit * 14;
 		overflow: hidden;
-		white-space:nowrap;
 		padding-left: $measure-unit * 2;
 		text-indent: $measure-unit * -1;
 		text-overflow: ellipsis;
+		white-space: nowrap;
+		width: 100%;
 	}
 }
 .btn--outline {
 	@extend %btn;
 	@include hover {
-		color:$color-link-primary-hover;
-		border-color:$color-link-primary-hover;
+		border-color: $color-link-primary-hover;
+		color: $color-link-primary-hover;
 	}
 }
 [href*="dribbble.com"] {
