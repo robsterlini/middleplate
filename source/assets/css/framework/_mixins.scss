@@ -79,3 +79,36 @@
 	}
 }
 
+
+/**
+ * Creates social coloured buttons as .btn or .btn--outline or both using the brand
+ * colours defined within framework/_color.scss
+ *
+ * @param string 	$c		The colour you want to use (hex or Sass variable).
+ * @param bool 		$b 		This boolean creates styling for the .btn variant 						[default: true]
+ * @param bool 		$o 		This boolean creates styling for the .btn--outline variant 		[default: true]
+ * @param int 		$p 		The percentage you want to darken the button on over 					[default: 12%]
+**/
+
+@mixin social-color($c, $b: true, $o: true, $p: 12%) {
+	@if $b == true {
+		&.btn {
+			background-color: $c;
+			border-color: $c;
+			@include hover {
+				background-color: darken($c, $p);
+				border-color: darken($c, $p);
+			}
+		}
+	}
+	@if $o == true {
+		&.btn--outline {
+			color: $c;
+			border-color: $c;
+			@include hover {
+				color: darken($c, $p);
+				border-color: darken($c, $p);
+			}
+		}
+	}
+}

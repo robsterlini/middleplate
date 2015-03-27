@@ -93,28 +93,6 @@
 		border-color:$color-link-primary-hover;
 	}
 }
-@mixin social-color($c, $b: true, $o: true, $p: 12%) {
-	@if $b == true {
-		&.btn {
-			background-color: $c;
-			border-color: $c;
-			@include hover {
-				background-color: darken($c, $p);
-				border-color: darken($c, $p);
-			}
-		}
-	}
-	@if $o == true {
-		&.btn--outline {
-			color: $c;
-			border-color: $c;
-			@include hover {
-				color: darken($c, $p);
-				border-color: darken($c, $p);
-			}
-		}
-	}
-}
 [href*="dribbble.com"] {
 	@include social-color($color-s-dribbble, true, true, 15%);
 }
