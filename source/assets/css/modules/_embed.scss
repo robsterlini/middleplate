@@ -1,5 +1,5 @@
 iframe {
-  margin:rem(20) auto;
+  margin: $measure-unit auto;
   display: block;
   &[id^="twitter-widget"] {
     margin-left:auto !important;

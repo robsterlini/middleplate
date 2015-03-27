@@ -9,9 +9,9 @@
 ul,
 ol {
 	@extend %paragraph;
-	max-width:rem($layout-max-width + (25 * 2));
+	max-width:rem($layout-max-width + ($measure * 3));
 	list-style: circle outside none;
-	padding:0 rem(25);
+	padding:0 $measure-unit * 1.5;
 	& > li {
 		max-width:$layout-max-width-unit;
 		& > ul {

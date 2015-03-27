@@ -17,13 +17,13 @@ h1, h2, h3, h4, h5, h6, p, ul, ol {
 h1 {
 	@include font-size(52);
 	font-weight: $font-weight-bold;
-	margin:rem(72) auto rem(24);
+	margin: $measure-unit * 4 auto $measure-unit * 2;
 }
 
 h2 {
 	@include font-size(32);
 	font-weight: $font-weight-bold;
-	margin:rem(48) auto rem(12);
+	margin: $measure-unit * 3 auto $measure-unit ;
 }
 
 %h3 {
@@ -33,12 +33,12 @@ h2 {
 h3 {
 	@extend %h3;
 	font-weight: $font-weight-bold;
-	margin:rem(24) auto rem(16);
+	margin: $measure-unit * 1.5 auto $measure-unit;
 }
 
 %h4 {
 	@include font-size(22);
-	margin: rem(8) auto rem(16);
+	margin: $measure-unit / 2 auto $measure-unit;
 }
 
 h4 {
@@ -86,7 +86,7 @@ h6 {
 %paragraph {
 	@include font-size(18);
 	line-height:1.45;
-	margin:rem(6) auto rem(12);
+	margin: $measure-unit / 2 auto $measure-unit;
 	@include max-width($bp-small) {
 		@include font-size(17);
 	}
@@ -111,15 +111,14 @@ p {
 }
 
 blockquote {
+	border-left: lighten($color-accent,15%) solid $btn-border;
 	font-weight: $font-weight-normal;
 	font-style:italic;
-	margin:rem(15) auto;
-	border-left:lighten($color-accent,15%) solid rem(2);
-	padding-left:rem(23);
-	& + &,
-	.article__description + & {
-		margin-top: rem(30);
+	margin: $measure-unit auto;
 	max-width: $layout-max-width-unit;
+	padding-left: $measure-unit * 1.5;
+	& + & {
+		margin-top: $measure-unit * 2;
 	}
 	p {
 		@include font-size(24);
@@ -139,13 +138,13 @@ blockquote {
 		font-style: normal;
 		display: block;
 		@include font-size(18);
-		margin-top: rem(5);
 		@include max-width($bp-small) {
 			@include font-size(17);
 		}
 		@include max-width($bp-tiny) {
 			@include font-size(16);
 		}
+		margin-top: $measure-unit / 2;
 		&:before {
 			content:'— ';
 		}
