@@ -11,7 +11,7 @@
 h1, h2, h3, h4, h5, h6, p, ul, ol {
 	@include font-feature-settings(liga kern onum);
 	max-width:$layout-max-width-suffix;
-	line-height: 1.35;
+	line-height: $font-default-line-height;
 }
 
 h1 {
