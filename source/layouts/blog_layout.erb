@@ -15,7 +15,7 @@
       <%= yield %>
       <p class="btns--center">
         <% full_url = "#{url_root}#{current_article.url}"; url_encoded = URI.encode(full_url, /\W/) %>
-        <a class="btn twitter-popup love-it" id="twitter-link" href="http://twitter.com/share?text=%E2%80%98<%= URI.encode(current_article.title, /\W/)  %>%E2%80%99%20%40RobSterlini%20%E2%80%93&url=<%= url_encoded %>" title="Loved the article? Share it on Twitter!">Loved it!</a>
+        <a class="btn" data-js="share-on-twitter" href="http://twitter.com/share?text=%E2%80%98<%= URI.encode(current_article.title, /\W/)  %>%E2%80%99%20%40<%= twitter_username %>%20%E2%80%93&url=<%= url_encoded %>" title="Loved the article? Share it on Twitter!">Loved it!</a>
       </p>
       <% prev_article = current_article.previous_article; next_article = current_article.next_article; %>
       <% if next_article || prev_article %>
