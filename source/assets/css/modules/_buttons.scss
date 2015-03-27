@@ -18,13 +18,6 @@
 
 .btns--center {
 	text-align: center;
-	body.contact_index & {
-		max-width: none;
-		padding: 0 rem(16);
-		@include max-width($bp-mid) {
-			padding: 0;
-		}
-	}
 }
 
 %btns--fixed {
@@ -98,16 +91,6 @@
 	@include hover {
 		color:$color-link-primary-hover;
 		border-color:$color-link-primary-hover;
-	}
-}
-.btn--icon {
-	padding-left: rem(50);
-	position: relative;
-	&:before {
-		font-size: rem(32);
-		position: absolute;
-		top: calc(50% - #{rem(16)});
-		left: rem(8);
 	}
 }
 @mixin social-color($c, $b: true, $o: true, $p: 12%) {

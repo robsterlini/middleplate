@@ -97,36 +97,6 @@ $font-weight-bold: bold;
 	font-size:$rem + rem;
 }
 
-
-/* ==|== Type =================
-	Load CSS based font-families
-========================================== */
-
-/**
- * Loads in the CSS font-face declarations based on a Sass list of fonts and their styles
- * Set the number of fonts that you want to load in in $fonts-total
- * Set the fonts themselves and make sure they're in the assets/fonts folder
- * Set the styles for the fonts, if Font-number-1 is a regular weight put normal,
- * if Font-number-2 is an italic weight put italic etc
-**/
-
-@mixin load-fonts($fonts-total,$fonts-to-load,$fonts-to-load-style,$fonts-to-load-weight) {
-
-	@while $fonts-total > 0  {
-		$font-face: nth($fonts-to-load, $fonts-total);
-		$font-style: nth($fonts-to-load-style, $fonts-total);
-		$font-weight: nth($fonts-to-load-weight, $fonts-total);
-		@font-face {
-		  font-family: #{$font-face}; font-style: #{$font-style}; font-weight: normal;
-		  src: url('../fonts/#{$font-face}.eot');
-		  src: url('../fonts/#{$font-face}.eot?') format('eot'),
-		       url('../fonts/#{$font-face}.woff') format('woff'),
-		       url('../fonts/#{$font-face}.ttf')  format('truetype');
-		}
-		$fonts-total: $fonts-total - 1;
-	}
-}
-
 /* ==|== Type =================
 	CSS3 OT font-feature-settings
 ========================================== */

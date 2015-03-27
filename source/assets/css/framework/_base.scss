@@ -38,15 +38,6 @@ body {
   min-height: 100vh;
   flex-direction: column;
 }
-.body--404 {
-	background:lighten($color-black,2%);
-	color:$color-white;
-	text-shadow:none;
-}
-
-.body--no-scroll {
-	overflow: hidden;
-}
 
 ::selection {
 	background:$color-black;
