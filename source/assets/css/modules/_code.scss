@@ -1,9 +1,6 @@
 code {
   font-size:0.9em;
   background:#f4f4f4;
-  .hero & {
-    background:none;
-  }
   @include max-width($bp-small) {
     @include font-size(16);
   }
