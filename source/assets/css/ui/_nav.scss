@@ -7,9 +7,21 @@
   }
 }
 .nav__list {
+  padding: 0;
+  @include min-width($tp-masthead-hamburger) {
     max-width: $layout-max-width-unit;
+  }
 }
 .nav__item {
+  @include min-width($tp-masthead-hamburger) {
+    display: inline;
+  	& + li {
+      &:before {
+        color: $color-accent;
+        content:' • ';
+      }
+    }
+  }
 }
 [class^="nav__link--"] {
 	
