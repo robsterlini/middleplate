@@ -5,7 +5,7 @@
  */
 
 /* ==|== Typography =================
-	1. Headings
+	Headings
 ========================================== */
 
 h1, h2, h3, h4, h5, h6, p, ul, ol {
@@ -83,6 +83,7 @@ h6 {
 /* ==|== Typography =================
 	Paragraphs
 ========================================== */
+
 %paragraph {
 	@include font-size(18);
 	line-height: 1.45;
@@ -101,6 +102,10 @@ p {
 	@extend %h3;
 }
 
+/* ==|== Typography =================
+	Small caps
+========================================== */
+
 .small-caps,
 .sc {
 	@include font-feature-settings(smcp c2sc lnum kern);
@@ -109,6 +114,9 @@ p {
 	line-height: 1.1;
 }
 
+/* ==|== Typography =================
+	Blockquote
+========================================== */
 
 blockquote {
 	border-left: lighten($color-accent,15%) solid $btn-border;
@@ -144,6 +152,10 @@ blockquote {
 		}
 	}
 }
+
+/* ==|== Typography =================
+	Underlines, strikethroughs etc
+========================================== */
 
 abbr[title] {
 	background: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQgMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNCAyIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cmVjdCBmaWxsPSIjMzMzMzMzIiB3aWR0aD0iMiIgaGVpZ2h0PSIyIi8+PC9zdmc+) repeat-x left 88%;

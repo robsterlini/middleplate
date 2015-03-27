@@ -1,4 +1,21 @@
+/**
+ * Masthead SCSS Partial
+ *
+ * @requires framework/_type.scss, framework/_variable.scss
+ */
+
+/* ==|== Masthead =================
+	General
+========================================== */
+
 .masthead {
+
+}
+
+/* ==|== Masthead =================
+	Logo
+========================================== */
+
 .masthead__logo {
 	margin: $measure-unit * 2 auto $measure-unit;
 	max-width: $layout-max-width-unit;

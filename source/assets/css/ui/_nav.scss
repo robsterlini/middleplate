@@ -1,3 +1,14 @@
+/**
+ * Navigation SCSS Partial
+ *
+ * @requires framework/_type.scss, framework/_variable.scss,
+ *           modules/_lists.scss
+ */
+
+/* ==|== Navigation =================
+  General
+========================================== */
+
 .nav {
   @include max-width($tp-masthead-hamburger) {
   	display: none;
@@ -26,6 +37,11 @@
 [class^="nav__link--"] {
 	
 }
+
+/* ==|== Navigation =================
+  Menu button
+========================================== */
+
 .nav__toggle {
 	@include min-width($tp-masthead-hamburger) {
 		display: none;
