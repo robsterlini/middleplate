@@ -136,14 +136,8 @@ blockquote {
 	}
 	cite {
 		font-style: normal;
+		@extend %paragraph;
 		display: block;
-		@include font-size(18);
-		@include max-width($bp-small) {
-			@include font-size(17);
-		}
-		@include max-width($bp-tiny) {
-			@include font-size(16);
-		}
 		margin-top: $measure-unit / 2;
 		&:before {
 			content:'— ';
