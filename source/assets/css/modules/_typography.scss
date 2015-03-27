@@ -109,9 +109,6 @@ p {
 	line-height: 1.1;
 }
 
-.paragraph--pullout {
-	@extend %h3;
-}
 
 blockquote {
 	border-left: lighten($color-accent,15%) solid $btn-border;
