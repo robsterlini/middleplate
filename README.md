@@ -32,7 +32,7 @@ This gives us use of three main commands: `middleman init`, `middleman server` a
 
 Clone the Middleplate Git repository into a folder.  We’ll imagine we’re building a food blog.
 
-    git clone https://github.com/robsterlini/middleplate.git food_blog
+    $ git clone https://github.com/robsterlini/middleplate.git food_blog
 
 Once you’ve done that, cd into the folder and run the server command:
 
