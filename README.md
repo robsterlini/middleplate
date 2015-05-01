@@ -327,4 +327,4 @@ If there are any sites that you want added to either of this list just [get in t
 
 Middleplate is built on the [Fueled boilerplate](https://github.com/fueled/fueled-boilerplate). Find out more about Fueled at [fueled.com](http://fueled.com "Visit the Fueled website").
 
-And so far everything has been done by me, Rob Sterlini; but that’s only one pull request away! I’d love your contributions if you see anything that needs correcting, or have any improvements to make. Collaborate, collaborate, collaborate!
+You can check out the [full list of collaborators](https://github.com/robsterlini/middleplate/graphs/contributors "Find out who’s collaborated on Middleplate") to find out who’s had their hand in making Middleplate what it is today.
