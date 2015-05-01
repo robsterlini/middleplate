@@ -30,11 +30,13 @@ This gives us use of three main commands: `middleman init`, `middleman server` a
 
 ### Installing Middleplate
 
-There’s probably a command-line way of doing this (if you want to write it up and submit a <abbr class="sc" title="pull request">PR</abbr> then I’d love to include it).
+Clone the Middleplate Git repository into a folder.  We’ll imagine we’re building a food blog.
 
-The easiest way (and the way I like doing it) is [downloading the .zip file](https://github.com/robsterlini/middleplate "Download the Middleman repo from GitGub") and unpacking it into your desired directory. We’ll imagine we’re building a food blog. Once you’ve done that, cd into the folder and run the server command:
+    git clone https://github.com/robsterlini/middleplate.git food_blog
 
-    $ cd ~/sites/food_blog
+Once you’ve done that, cd into the folder and run the server command:
+
+    $ cd food_blog
     $ middleman server
 
 If all goes well you’ll get this:
